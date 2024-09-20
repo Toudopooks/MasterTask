@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFBFC"
+    tools:context="com.example.taskmanager.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAREAS"
+        android:textSize="30sp"
+        android:id="@+id/Tareas"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:id="@+id/recyclerview"
+        android:layout_below="@+id/Tareas"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reagg"
+        android:layout_below="@+id/recyclerview">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/AgregarTarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Tarea"
+            android:textColor="@color/white"
+            android:backgroundTint="#1520A6"
+            android:layout_alignParentBottom="true"
+            />
+    </LinearLayout>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="com.example.taskmanager.SwipeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-48dp" />
+
+
+</RelativeLayout>
